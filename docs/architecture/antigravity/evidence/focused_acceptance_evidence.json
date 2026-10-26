@@ -1,0 +1,114 @@
+{
+  "concurrency": {
+    "cody": {
+      "assignedAt": 1793173903700,
+      "admittedAt": 1793173903706,
+      "executionStart": 1793173903707,
+      "executionEnd": 1793173904908,
+      "completedAt": 1793173904940
+    },
+    "doc": {
+      "assignedAt": 1793173903706,
+      "admittedAt": 1793173903708,
+      "executionStart": 1793173903708,
+      "executionEnd": 1793173904911,
+      "completedAt": 1793173904948
+    },
+    "scraapy": {
+      "assignedAt": 1793173903706,
+      "admittedAt": 1793173903708,
+      "executionStart": 1793173903709,
+      "executionEnd": 1793173906395,
+      "completedAt": 1793173906396
+    },
+    "executionOverlapMs": 1199,
+    "admissionOverlapMs": 1232,
+    "allThreeOverlap": true,
+    "timingDefinitions": {
+      "assignedAt": "Timestamp when Maestro delegates the task to the specialist (worker.assigned SSE event)",
+      "admittedAt": "Timestamp when the task scheduler admits and starts the worker (worker.started SSE event)",
+      "executionStart": "Timestamp when actual model inference/tool execution begins in the runtime provider",
+      "executionEnd": "Timestamp when actual model inference/tool execution completes in the runtime provider",
+      "completedAt": "Timestamp when the specialist finishes and records its result (worker.completed SSE event)"
+    }
+  },
+  "liveActivity": {
+    "workerStartedBeforeCompleted": true,
+    "firstAttributedEventMs": 15,
+    "completedAt": 1793173913682,
+    "incrementalEventCount": 6,
+    "attributedWorkerNames": [
+      "Maestro",
+      "Cody",
+      "Doc",
+      "Scraapy"
+    ],
+    "uiPanelsVerifiedWhileRunning": {
+      "cody": true,
+      "doc": true,
+      "scraapy": true
+    }
+  },
+  "taskLifecycle": {
+    "httpStatus": 200,
+    "eventSequence": [
+      "task.created",
+      "task.started",
+      "worker.assigned",
+      "worker.assigned",
+      "worker.assigned",
+      "worker.started",
+      "worker.started",
+      "worker.started",
+      "tool.started",
+      "worker.progress",
+      "worker.progress",
+      "tool.completed",
+      "worker.progress",
+      "worker.completed",
+      "worker.completed",
+      "worker.completed",
+      "maestro.responded",
+      "task.completed"
+    ],
+    "delegationSeen": true,
+    "toolExecutionSeen": true,
+    "specialistResultSeen": true,
+    "synthesisSeen": true,
+    "durableEvents": 18
+  },
+  "resourceAccuracy": {
+    "systemRamBytes": 17179869184,
+    "processRssBytes": 526712832,
+    "activeLeases": {
+      "executionSlots": 0,
+      "modelRequests": 0,
+      "browserSessions": 0,
+      "subprocesses": 0
+    },
+    "labelledCorrectly": true,
+    "processRssLtSystemRam": true
+  },
+  "failureRecovery": {
+    "mode": "specialist_level_cancellation",
+    "cancelledSpecialist": "scraapy",
+    "cancelAcknowledged": true,
+    "scraapyCancelledState": "cancelled",
+    "codyCompleted": true,
+    "docCompleted": true,
+    "maestroSynthesizedResults": true,
+    "activeLeasesAfterCompletion": {
+      "executionSlots": 0,
+      "modelRequests": 0,
+      "browserSessions": 0,
+      "subprocesses": 0
+    }
+  },
+  "screenshotPaths": [
+    "/Users/rahulkarthikt/Documents/mediobot/mediobot-v2/docs/architecture/antigravity/evidence/a2_live_cody.png",
+    "/Users/rahulkarthikt/Documents/mediobot/mediobot-v2/docs/architecture/antigravity/evidence/a2_live_doc.png",
+    "/Users/rahulkarthikt/Documents/mediobot/mediobot-v2/docs/architecture/antigravity/evidence/a2_live_scraapy.png",
+    "/Users/rahulkarthikt/Documents/mediobot/mediobot-v2/docs/architecture/antigravity/evidence/a2_live_activity.png",
+    "/Users/rahulkarthikt/Documents/mediobot/mediobot-v2/docs/architecture/antigravity/evidence/a4_resource_governor.png"
+  ]
+}

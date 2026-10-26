@@ -5,10 +5,11 @@
   "type": "module",
   "exports": "./src/index.ts",
   "scripts": {
-    "test": "node --experimental-strip-types --test src/index.test.ts",
+    "test": "node --experimental-strip-types --test tests/index.test.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@mediobot-v2/contracts": "workspace:*",
     "@mediobot-v2/domain": "workspace:*"
   },
   "devDependencies": {

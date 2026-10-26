@@ -1,0 +1,31 @@
+{
+  "name": "@mediobot-v2/maestro",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./legacy-orchestrator": "./src/orchestrator.ts"
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@langchain/langgraph": "1.5.1",
+    "@langchain/langgraph-checkpoint-sqlite": "1.1.0",
+    "@mediobot-v2/cody": "workspace:*",
+    "@mediobot-v2/contracts": "workspace:*",
+    "@mediobot-v2/domain": "workspace:*",
+    "@mediobot-v2/intelligence": "workspace:*",
+    "@mediobot-v2/models": "workspace:*",
+    "@mediobot-v2/runtime": "workspace:*",
+    "@mediobot-v2/tester": "workspace:*",
+    "@mediobot-v2/tools": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
+  }
+}

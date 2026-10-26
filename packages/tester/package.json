@@ -1,0 +1,21 @@
+{
+  "name": "@mediobot-v2/tester",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "scripts": {
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mediobot-v2/domain": "workspace:*",
+    "@mediobot-v2/runtime": "workspace:*",
+    "@mediobot-v2/tools": "workspace:*",
+    "@mediobot-v2/models": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
+  }
+}

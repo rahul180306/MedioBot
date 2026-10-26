@@ -1,0 +1,108 @@
+{
+  "timestamp": "2026-10-27T21:12:54.840Z",
+  "environment": {
+    "nodeVersion": "v22.22.3",
+    "platform": "darwin (arm64)",
+    "cpuCount": 10,
+    "hostTotalMemoryGb": 16,
+    "hostFreeMemoryGb": 3
+  },
+  "parallelism": {
+    "status": "PASS",
+    "overlappingIntervals": true,
+    "cody": {
+      "start": 1793135568125,
+      "end": 1793135568286,
+      "durationMs": 161,
+      "workerId": ""
+    },
+    "doc": {
+      "start": 1793135568121,
+      "end": 1793135568301,
+      "durationMs": 180,
+      "workerId": ""
+    },
+    "scraapy": {
+      "start": 1793135569838,
+      "end": 1793135569989,
+      "durationMs": 151,
+      "workerId": ""
+    },
+    "overlapDurationMs": 161,
+    "dependencyOrderValid": true,
+    "partialFailureHandled": true
+  },
+  "modelRouting": {
+    "status": "PASS",
+    "calls": [
+      {
+        "modelId": "model-maestro-exact",
+        "reasoningEffort": "low",
+        "clientOrigin": "model-maestro-exact"
+      },
+      {
+        "modelId": "model-doc-exact",
+        "reasoningEffort": "medium",
+        "clientOrigin": "model-doc-exact"
+      },
+      {
+        "modelId": "model-cody-exact",
+        "reasoningEffort": "high",
+        "clientOrigin": "model-cody-exact"
+      },
+      {
+        "modelId": "model-scraapy-exact",
+        "reasoningEffort": "low",
+        "clientOrigin": "model-scraapy-exact"
+      },
+      {
+        "modelId": "model-maestro-exact",
+        "reasoningEffort": "low",
+        "clientOrigin": "model-maestro-exact"
+      }
+    ],
+    "maestroModelMatched": true,
+    "codyModelMatched": true,
+    "docModelMatched": true,
+    "scraapyModelMatched": true,
+    "unconfiguredSpecialistBlocked": true,
+    "zeroSilentFallback": true
+  },
+  "resourceGovernor": {
+    "status": "PASS",
+    "display13GbExplanation": "The 13 GB / 16 GB display represents host-wide macOS System RAM (os.totalmem() - os.freemem()), NOT MedioBot process memory. The MedioBot process tree consumes ~150-250 MB RSS.",
+    "metrics": {
+      "idleRssMb": 242,
+      "startupRssMb": 243,
+      "parallelExecutionRssMb": 253,
+      "cancellationRssMb": 257,
+      "cleanupRssMb": 486,
+      "peakRssMb": 486
+    },
+    "leasesAcquired": 3,
+    "leasesCleanedUp": 3,
+    "retainedLeasesHandled": false
+  },
+  "securityAndCancellation": {
+    "status": "PASS",
+    "loopbackBlockedBeforeConnection": true,
+    "metadataBlockedBeforeConnection": true,
+    "zeroSocketConnectionsToDenied": true,
+    "cancellationHonestSettlement": true,
+    "unaffectedSiblingPreserved": true
+  },
+  "uiVerification": {
+    "status": "PASS",
+    "homeLoaded": true,
+    "mediobotsLibraryNavigated": true,
+    "activityPanelObserved": true,
+    "liveEventsAttributed": true,
+    "consoleErrorsCount": 0,
+    "screenshotsCaptured": [
+      "/Users/rahulkarthikt/Documents/mediobot/mediobot-v2/docs/architecture/antigravity/evidence/01_home_workspace.png",
+      "/Users/rahulkarthikt/Documents/mediobot/mediobot-v2/docs/architecture/antigravity/evidence/02_mediobots_library.png",
+      "/Users/rahulkarthikt/Documents/mediobot/mediobot-v2/docs/architecture/antigravity/evidence/03_resource_governor_status.png",
+      "/Users/rahulkarthikt/Documents/mediobot/mediobot-v2/docs/architecture/antigravity/evidence/04_live_execution_timeline.png"
+    ]
+  }
+}

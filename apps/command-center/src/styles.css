@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-family: var(--font-sans);
+  }
+
+  /* Universal transition properties for EVERY interactive element, control, button, card, row, tab, link, menu item, and hover target */
+  button,
+  a,
+  input,
+  select,
+  textarea,
+  summary,
+  [role="button"],
+  [role="option"],
+  [role="menuitem"],
+  [role="tab"],
+  [class*="hover:"],
+  [class*="hover-"],
+  [class*="group-hover:"],
+  .hover-smooth,
+  .dropdown-smooth-item {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter !important;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transition-duration: 200ms !important;
+  }
+
+  /* Ensures all container divs, spans, list items, tables, rows, svgs, paths and labels with hover effects transition smoothly */
+  div, span, li, tr, td, svg, path, label, p, article, section, aside, header, nav, h1, h2, h3, h4, h5, h6, i, code {
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Custom subtle scrollbars for code blocks and activity feeds */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.24);
+  }
+}
+
+/* Animations and utility classes */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes shimmer-text {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-shimmer-text {
+  background-size: 200% auto;
+  animation: shimmer-text 2.8s linear infinite;
+}
+
+@keyframes eye-blink {
+  0%, 86%, 94%, 100% {
+    transform: scaleY(1);
+  }
+  90% {
+    transform: scaleY(0.1);
+  }
+}
+
+.animate-eye-blink,
+.mediobot-eye-working {
+  transform-origin: center center;
+  animation: eye-blink 3.2s ease-in-out infinite !important;
+}
+
+@keyframes cursor-blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-cursor-blink {
+  animation: cursor-blink 0.9s ease-in-out infinite;
+}

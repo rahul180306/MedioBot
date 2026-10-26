@@ -1,0 +1,233 @@
+@import "tailwindcss";
+
+@keyframes fuse-burn {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+.animate-fuse-burn {
+  animation: fuse-burn linear forwards;
+}
+
+/* Highlight.js token colors share the editor's muted dark palette. */
+.code-highlight-layer { color: #d4d4d8; }
+.code-edit-layer { color: transparent; caret-color: #f4f4f5; -webkit-text-fill-color: transparent; }
+.code-edit-layer::selection { background: rgb(99 102 241 / 35%); -webkit-text-fill-color: transparent; }
+.code-highlight-layer .hljs-comment, .code-highlight-layer .hljs-quote { color: #737985; font-style: italic; }
+.code-highlight-layer .hljs-keyword, .code-highlight-layer .hljs-selector-tag, .code-highlight-layer .hljs-literal { color: #c792ea; }
+.code-highlight-layer .hljs-string, .code-highlight-layer .hljs-regexp, .code-highlight-layer .hljs-addition { color: #a5d6a7; }
+.code-highlight-layer .hljs-number, .code-highlight-layer .hljs-built_in, .code-highlight-layer .hljs-symbol { color: #f2a272; }
+.code-highlight-layer .hljs-title, .code-highlight-layer .hljs-function, .code-highlight-layer .hljs-section { color: #82aaff; }
+.code-highlight-layer .hljs-attr, .code-highlight-layer .hljs-attribute, .code-highlight-layer .hljs-property { color: #e5c07b; }
+.code-highlight-layer .hljs-type, .code-highlight-layer .hljs-class .hljs-title { color: #78c4a4; }
+.code-highlight-layer .hljs-meta, .code-highlight-layer .hljs-doctag { color: #9aa5ce; }
+
+/* Light mode Highlight.js token colors */
+.light .code-highlight-layer,
+[data-theme="light"] .code-highlight-layer { color: #1e293b; }
+.light .code-edit-layer,
+[data-theme="light"] .code-edit-layer { color: transparent; caret-color: #0284c7; -webkit-text-fill-color: transparent; }
+.light .code-edit-layer::selection,
+[data-theme="light"] .code-edit-layer::selection { background: rgb(186 230 253 / 60%); -webkit-text-fill-color: transparent; }
+.light .code-highlight-layer .hljs-comment,
+.light .code-highlight-layer .hljs-quote,
+[data-theme="light"] .code-highlight-layer .hljs-comment,
+[data-theme="light"] .code-highlight-layer .hljs-quote { color: #64748b; font-style: italic; }
+.light .code-highlight-layer .hljs-keyword,
+.light .code-highlight-layer .hljs-selector-tag,
+.light .code-highlight-layer .hljs-literal,
+[data-theme="light"] .code-highlight-layer .hljs-keyword,
+[data-theme="light"] .code-highlight-layer .hljs-selector-tag,
+[data-theme="light"] .code-highlight-layer .hljs-literal { color: #6d28d9; font-weight: 500; }
+.light .code-highlight-layer .hljs-string,
+.light .code-highlight-layer .hljs-regexp,
+.light .code-highlight-layer .hljs-addition,
+[data-theme="light"] .code-highlight-layer .hljs-string,
+[data-theme="light"] .code-highlight-layer .hljs-regexp,
+[data-theme="light"] .code-highlight-layer .hljs-addition { color: #047857; }
+.light .code-highlight-layer .hljs-number,
+.light .code-highlight-layer .hljs-built_in,
+.light .code-highlight-layer .hljs-symbol,
+[data-theme="light"] .code-highlight-layer .hljs-number,
+[data-theme="light"] .code-highlight-layer .hljs-built_in,
+[data-theme="light"] .code-highlight-layer .hljs-symbol { color: #b45309; }
+.light .code-highlight-layer .hljs-title,
+.light .code-highlight-layer .hljs-function,
+.light .code-highlight-layer .hljs-section,
+[data-theme="light"] .code-highlight-layer .hljs-title,
+[data-theme="light"] .code-highlight-layer .hljs-function,
+[data-theme="light"] .code-highlight-layer .hljs-section { color: #0369a1; }
+.light .code-highlight-layer .hljs-attr,
+.light .code-highlight-layer .hljs-attribute,
+.light .code-highlight-layer .hljs-property,
+[data-theme="light"] .code-highlight-layer .hljs-attr,
+[data-theme="light"] .code-highlight-layer .hljs-attribute,
+[data-theme="light"] .code-highlight-layer .hljs-property { color: #0284c7; }
+.light .code-highlight-layer .hljs-type,
+.light .code-highlight-layer .hljs-class .hljs-title,
+[data-theme="light"] .code-highlight-layer .hljs-type,
+[data-theme="light"] .code-highlight-layer .hljs-class .hljs-title { color: #be123c; }
+.light .code-highlight-layer .hljs-meta,
+.light .code-highlight-layer .hljs-doctag,
+[data-theme="light"] .code-highlight-layer .hljs-meta,
+[data-theme="light"] .code-highlight-layer .hljs-doctag { color: #475569; }
+
+/* Light mode subtle scrollbars */
+.light ::-webkit-scrollbar-thumb,
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 9999px;
+}
+.light ::-webkit-scrollbar-thumb:hover,
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.28);
+}
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-family: var(--font-sans);
+    --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Universal smooth hover transition curve matching uploaded image components */
+  *,
+  *::before,
+  *::after {
+    --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Universal transition properties for EVERY interactive element, control, button, card, row, tab, link, menu item, and hover target */
+  button,
+  a,
+  input,
+  select,
+  textarea,
+  summary,
+  [role="button"],
+  [role="option"],
+  [role="menuitem"],
+  [role="tab"],
+  [class*="hover:"],
+  [class*="hover-"],
+  [class*="group-hover:"],
+  .hover-smooth,
+  .dropdown-smooth-item {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter !important;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transition-duration: 200ms !important;
+  }
+
+  /* Ensures all container divs, spans, list items, tables, rows, svgs, paths and labels with hover effects transition smoothly */
+  div, span, li, tr, td, svg, path, label, p, article, section, aside, header, nav, h1, h2, h3, h4, h5, h6, i, code {
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Custom subtle scrollbars for code blocks and activity feeds */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.24);
+  }
+}
+
+/* Smooth hover transition utility classes */
+.hover-smooth {
+  transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.dropdown-smooth-card {
+  background: #1e1d23;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 6px;
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), opacity 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dropdown-smooth-item {
+  border-radius: 12px;
+  padding: 8px 12px;
+  color: #d1d1d8;
+  font-weight: 500;
+  transition: background-color 200ms cubic-bezier(0.16, 1, 0.3, 1), color 200ms cubic-bezier(0.16, 1, 0.3, 1), transform 150ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.dropdown-smooth-item:hover,
+.dropdown-smooth-item[aria-selected="true"] {
+  background-color: #32313a;
+  color: #ffffff;
+}
+
+/* Animations and utility classes */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes shimmer-text {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-shimmer-text {
+  background-size: 200% auto;
+  animation: shimmer-text 2.8s linear infinite;
+}
+
+@keyframes eye-blink {
+  0%, 86%, 94%, 100% {
+    transform: scaleY(1);
+  }
+  90% {
+    transform: scaleY(0.1);
+  }
+}
+
+.animate-eye-blink,
+.mediobot-eye-working {
+  transform-origin: center center;
+  animation: eye-blink 3.2s ease-in-out infinite !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-eye-blink, .mediobot-eye-working, .animate-pulse-subtle, .animate-shimmer-text, .animate-cursor-blink {
+    animation: none !important;
+  }
+}
+
+@keyframes cursor-blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-cursor-blink {
+  animation: cursor-blink 0.9s ease-in-out infinite;
+}
+

@@ -1,0 +1,25 @@
+{
+  "name": "@mediobot-v2/vision",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "scripts": {
+    "test": "node --experimental-strip-types --test --test-concurrency=1 tests/adapter.test.ts tests/browser-runtime.test.ts tests/model-boundaries.test.ts",
+    "test:browser": "node --experimental-strip-types --test --test-concurrency=1 tests/acceptance.test.ts tests/benchmark-app.test.ts tests/hybrid.test.ts tests/index.test.ts tests/review-regressions.test.ts",
+    "test:headed": "node --experimental-strip-types --test --test-concurrency=1 tests/controlled-lifecycle.test.ts tests/focused-no-effect.test.ts",
+    "manual": "node --experimental-strip-types tests/manual/vision-manual.ts",
+    "benchmark": "node --experimental-strip-types tests/manual/benchmark-preview.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mediobot-v2/domain": "workspace:*",
+    "@mediobot-v2/models": "workspace:*",
+    "@mediobot-v2/runtime": "workspace:*",
+    "playwright": "1.63.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
+  }
+}

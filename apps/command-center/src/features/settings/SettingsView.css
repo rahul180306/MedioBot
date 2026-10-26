@@ -1,0 +1,148 @@
+/* Scoped CSS for SettingsView component */
+
+/* Root theme variable definitions */
+.settings-view-root {
+  --settings-text-primary: #e5e5e7;
+  --settings-text-secondary: #a1a1aa;
+  --settings-text-muted: #71717a;
+  --settings-heading: #ffffff;
+  --settings-card-bg: #1d1d21;
+  --settings-border: #2b2b32;
+  color: var(--settings-text-primary);
+}
+
+/* Light mode styles: dark grey (#1f2937) for text */
+.settings-view-root.settings-theme-light,
+.settings-view-root[data-theme="light"],
+.light .settings-view-root {
+  --settings-text-primary: #1f2937;
+  --settings-text-secondary: #374151;
+  --settings-text-muted: #4b5563;
+  --settings-heading: #1f2937;
+  --settings-card-bg: #f8f9fa;
+  --settings-border: #e2e4e8;
+  color: #1f2937;
+}
+
+/* Dark mode styles: retain existing light gray (#e5e5e7) */
+.settings-view-root.settings-theme-dark,
+.settings-view-root[data-theme="dark"],
+:not(.light) .settings-view-root {
+  --settings-text-primary: #e5e5e7;
+  --settings-text-secondary: #a1a1aa;
+  --settings-text-muted: #71717a;
+  --settings-heading: #ffffff;
+  --settings-card-bg: #1d1d21;
+  --settings-border: #2b2b32;
+  color: #e5e5e7;
+}
+
+/* Scoped panel rules for Settings Panels in Light Mode */
+.settings-view-root.settings-theme-light .settings-panel,
+.settings-view-root[data-theme="light"] .settings-panel,
+.settings-view-root.settings-theme-light .settings-content-panel,
+.settings-view-root[data-theme="light"] .settings-content-panel,
+.light .settings-view-root .settings-panel,
+.light .settings-view-root .settings-content-panel {
+  color: #1f2937;
+}
+
+/* Dynamically adjust headings in Light Mode */
+.settings-view-root.settings-theme-light .settings-panel h1,
+.settings-view-root.settings-theme-light .settings-panel h2,
+.settings-view-root.settings-theme-light .settings-panel h3,
+.settings-view-root.settings-theme-light .settings-panel h4,
+.settings-view-root[data-theme="light"] .settings-panel h1,
+.settings-view-root[data-theme="light"] .settings-panel h2,
+.settings-view-root[data-theme="light"] .settings-panel h3,
+.settings-view-root[data-theme="light"] .settings-panel h4,
+.settings-view-root.settings-theme-light .settings-content-panel h1,
+.settings-view-root.settings-theme-light .settings-content-panel h2,
+.settings-view-root.settings-theme-light .settings-content-panel h3,
+.settings-view-root.settings-theme-light .settings-content-panel h4,
+.settings-view-root[data-theme="light"] .settings-content-panel h1,
+.settings-view-root[data-theme="light"] .settings-content-panel h2,
+.settings-view-root[data-theme="light"] .settings-content-panel h3,
+.settings-view-root[data-theme="light"] .settings-content-panel h4,
+.light .settings-view-root .settings-content-panel h1,
+.light .settings-view-root .settings-content-panel h2,
+.light .settings-view-root .settings-content-panel h3,
+.light .settings-view-root .settings-content-panel h4 {
+  color: #1f2937;
+}
+
+.settings-view-root.settings-theme-light .settings-item-title,
+.settings-view-root[data-theme="light"] .settings-item-title,
+.light .settings-view-root .settings-item-title {
+  color: #1f2937;
+}
+
+.settings-view-root.settings-theme-light .settings-item-desc,
+.settings-view-root[data-theme="light"] .settings-item-desc,
+.light .settings-view-root .settings-item-desc {
+  color: #4b5563;
+}
+
+/* Scoped panel rules for Settings Panels in Dark Mode */
+.settings-view-root.settings-theme-dark .settings-panel,
+.settings-view-root[data-theme="dark"] .settings-panel,
+.settings-view-root.settings-theme-dark .settings-content-panel,
+.settings-view-root[data-theme="dark"] .settings-content-panel,
+:not(.light) .settings-view-root .settings-panel,
+:not(.light) .settings-view-root .settings-content-panel {
+  color: #e5e5e7;
+}
+
+.settings-view-root.settings-theme-dark .settings-panel h1,
+.settings-view-root.settings-theme-dark .settings-panel h2,
+.settings-view-root.settings-theme-dark .settings-panel h3,
+.settings-view-root.settings-theme-dark .settings-panel h4,
+.settings-view-root[data-theme="dark"] .settings-panel h1,
+.settings-view-root[data-theme="dark"] .settings-panel h2,
+.settings-view-root[data-theme="dark"] .settings-panel h3,
+.settings-view-root[data-theme="dark"] .settings-panel h4,
+.settings-view-root.settings-theme-dark .settings-content-panel h1,
+.settings-view-root.settings-theme-dark .settings-content-panel h2,
+.settings-view-root.settings-theme-dark .settings-content-panel h3,
+.settings-view-root.settings-theme-dark .settings-content-panel h4,
+.settings-view-root[data-theme="dark"] .settings-content-panel h1,
+.settings-view-root[data-theme="dark"] .settings-content-panel h2,
+.settings-view-root[data-theme="dark"] .settings-content-panel h3,
+.settings-view-root[data-theme="dark"] .settings-content-panel h4 {
+  color: #ffffff;
+}
+
+.settings-view-root.settings-theme-dark .settings-item-title,
+.settings-view-root[data-theme="dark"] .settings-item-title {
+  color: #e5e5e7;
+}
+
+.settings-view-root.settings-theme-dark .settings-item-desc,
+.settings-view-root[data-theme="dark"] .settings-item-desc {
+  color: #a1a1aa;
+}
+
+/* Navigation button classes */
+.settings-view-root.settings-theme-light .settings-nav-btn {
+  color: #374151;
+}
+.settings-view-root.settings-theme-light .settings-nav-btn:hover {
+  color: #1f2937;
+  background-color: #eaebee;
+}
+.settings-view-root.settings-theme-light .settings-nav-btn.active {
+  color: #1f2937;
+  background-color: #ffffff;
+}
+
+.settings-view-root.settings-theme-dark .settings-nav-btn {
+  color: #a1a1aa;
+}
+.settings-view-root.settings-theme-dark .settings-nav-btn:hover {
+  color: #e5e5e7;
+  background-color: #222226;
+}
+.settings-view-root.settings-theme-dark .settings-nav-btn.active {
+  color: #e5e5e7;
+  background-color: #2a2a2e;
+}

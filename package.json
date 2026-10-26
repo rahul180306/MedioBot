@@ -4,7 +4,21 @@
   "private": true,
   "packageManager": "pnpm@9.15.0",
   "scripts": {
-    "test": "pnpm -r test",
+    "dev": "pnpm --filter @mediobot-v2/command-center dev",
+    "test": "pnpm -r --workspace-concurrency=1 test",
+    "test:unit": "pnpm -r --workspace-concurrency=1 --filter '!@mediobot-v2/command-center' test",
+    "test:backend": "pnpm --filter @mediobot-v2/command-center test",
+    "test:workspace-watchers": "pnpm --filter @mediobot-v2/command-center test:watchers",
+    "test:ui": "pnpm --filter @mediobot-v2/command-center test:ui",
+    "test:e2e": "pnpm --filter @mediobot-v2/command-center test:e2e",
+    "test:vision": "pnpm --filter @mediobot-v2/vision test",
+    "test:vision:browser": "pnpm --filter @mediobot-v2/vision test:browser",
+    "test:vision:headed": "pnpm --filter @mediobot-v2/vision test:headed",
+    "test:live-models": "pnpm --filter @mediobot-v2/command-center test:live-models",
+    "eval:models:offline": "node --experimental-strip-types apps/command-center/scripts/evaluate-model-contracts.ts",
+    "collaboration:group:manual": "node --experimental-strip-types --test --test-name-pattern='shared groups persist|version-7 migration|shared group finding is delivered live' apps/command-center/tests/runtime/specialist-collaboration-persistence.test.ts packages/maestro/tests/specialist-communication.test.ts",
+    "vision:manual": "pnpm --filter @mediobot-v2/vision manual",
+    "vision:benchmark": "pnpm --filter @mediobot-v2/vision benchmark",
     "typecheck": "pnpm -r typecheck"
   },
   "devDependencies": {

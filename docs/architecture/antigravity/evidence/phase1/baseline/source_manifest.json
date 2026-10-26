@@ -1,0 +1,441 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-10-28T13:35:23.118Z",
+  "gate": "G00",
+  "gateName": "Baseline Preservation",
+  "status": "PASS",
+  "git": {
+    "baseCommitHash": "2dd22440401bb38e240ac2cb4ea1523c3c3d02f0",
+    "branch": "main",
+    "stashCount": 0,
+    "trackedDirtyCount": 18,
+    "trackedModifiedCount": 13,
+    "trackedDeletedCount": 5,
+    "untrackedCount": 29,
+    "destructiveOperationsPermitted": false
+  },
+  "secretExclusion": {
+    "envFileStatus": "EXCLUDED_AND_IGNORED",
+    "gitignoreRule": ".gitignore:9:.env",
+    "envExampleSha256": "460f9aa0c3b8a5b45e1cfec9501244dc4645569f287548f296dd6280f77ff856",
+    "secretsInManifest": false
+  },
+  "trackedDirtyFiles": [
+    {
+      "status": "M",
+      "path": ".gitignore",
+      "headBlobSha1": "518b169b3087779026b8e8e978ec901080f2e21e",
+      "currentSha256": "fe26e522e50ed611dcc9245ce3b60066d2d0450724062daedc541a164c5debf5",
+      "byteSize": 165
+    },
+    {
+      "status": "D",
+      "path": "README.md",
+      "headBlobSha1": "30236f4603adef6e60cef8c8810872400a6758a0",
+      "currentSha256": null,
+      "byteSize": null
+    },
+    {
+      "status": "M",
+      "path": "package.json",
+      "headBlobSha1": "ce1f8776e4e0e679dfe582bd0586cf7301fa1629",
+      "currentSha256": "64a4de4fd56c1dcb347176bc77352377477f5071f70894ad7b0464120ccf1a32",
+      "byteSize": 1624
+    },
+    {
+      "status": "M",
+      "path": "packages/cody/package.json",
+      "headBlobSha1": "1b3f6282d91280969626c9e0f7e06aac335ce963",
+      "currentSha256": "6630ad9a8c50e65cec4956ec3403e0455a2c4e010d8b4613d8f42cb83cf41e4e",
+      "byteSize": 525
+    },
+    {
+      "status": "D",
+      "path": "packages/cody/src/index.test.ts",
+      "headBlobSha1": "66680a84268768cf91898a2ca8bc80dc1c598ac0",
+      "currentSha256": null,
+      "byteSize": null
+    },
+    {
+      "status": "M",
+      "path": "packages/cody/src/index.ts",
+      "headBlobSha1": "3fe14d0b37fdcaed41fb32dddcd26254a7d542ce",
+      "currentSha256": "6566025c93e69615e0793a0bb2c2f3f337ed3e9399fb37fc7902948fec5fd063",
+      "byteSize": 994
+    },
+    {
+      "status": "M",
+      "path": "packages/domain/package.json",
+      "headBlobSha1": "04fb9de68e0258d2fe33862ab33f78ddfacf9e0c",
+      "currentSha256": "f33c46ef3a9ec04b9dfd97a32d07262d2d55e8556e6a07b27760f60daf2d1612",
+      "byteSize": 265
+    },
+    {
+      "status": "D",
+      "path": "packages/domain/src/index.test.ts",
+      "headBlobSha1": "34b469798b0b2f9d9916a257d381e1864c6a451c",
+      "currentSha256": null,
+      "byteSize": null
+    },
+    {
+      "status": "M",
+      "path": "packages/domain/src/index.ts",
+      "headBlobSha1": "6b45bba6a9888ab7f4c8a982ae3b29a20c1268cd",
+      "currentSha256": "74d27aca6ecd310d660be5a38362c1bbde5ce0ec6709279456f1717df8b93f1c",
+      "byteSize": 39249
+    },
+    {
+      "status": "M",
+      "path": "packages/runtime/package.json",
+      "headBlobSha1": "041eba73c2ef7c94e699c2afb6365b20ee426d73",
+      "currentSha256": "17abece995156ed272f66516d1479ba09348cd3e7c5760c70646b5001468a511",
+      "byteSize": 447
+    },
+    {
+      "status": "D",
+      "path": "packages/runtime/src/index.test.ts",
+      "headBlobSha1": "7d9b8230e8be272ebe948c0de11c4cf6f12083d9",
+      "currentSha256": null,
+      "byteSize": null
+    },
+    {
+      "status": "M",
+      "path": "packages/runtime/src/index.ts",
+      "headBlobSha1": "6cefc3413cd9b2c412860bd8ad11dac88a1a8c13",
+      "currentSha256": "35097d33c2307e9b52cbf815281182af77194e1c1a7da7ecc0a272f772f1a6e7",
+      "byteSize": 25148
+    },
+    {
+      "status": "M",
+      "path": "packages/tools/package.json",
+      "headBlobSha1": "b5403d2f50a4052397761078379049ecaef16b4a",
+      "currentSha256": "d7ee19d58ae25e9dee6bca9b760b1a39ddce221a3b7cac91b2a7f61f1cf7c2b6",
+      "byteSize": 449
+    },
+    {
+      "status": "D",
+      "path": "packages/tools/src/index.test.ts",
+      "headBlobSha1": "7970db279ba95042461c7212bd8ca6bf09550cf1",
+      "currentSha256": null,
+      "byteSize": null
+    },
+    {
+      "status": "M",
+      "path": "packages/tools/src/index.ts",
+      "headBlobSha1": "d4ea96a54a27a0ac22b88fcf20a22b79b9f13869",
+      "currentSha256": "6583273096dc76afe028b1b5debb9a943aa5d6807ddfe340f9bd0a352c795834",
+      "byteSize": 67030
+    },
+    {
+      "status": "M",
+      "path": "pnpm-lock.yaml",
+      "headBlobSha1": "cb01dee0af35c1c6e4fcaecf57b42f9d1efb4126",
+      "currentSha256": "c7b9ad26c2305e67ec34ada6b6141a2f07ea7fe82d6f5cab6df8fdd7fdc1245b",
+      "byteSize": 72692
+    },
+    {
+      "status": "M",
+      "path": "pnpm-workspace.yaml",
+      "headBlobSha1": "dee51e928d8abc3063b11689792bba48750eb708",
+      "currentSha256": "316f2a0038d464f103abd64d7338dacefc35d0d09e57c8296defa0d5ddb898fe",
+      "byteSize": 40
+    },
+    {
+      "status": "M",
+      "path": "tsconfig.json",
+      "headBlobSha1": "7153a709e29e55c21a91c93e392a32372b74b960",
+      "currentSha256": "ecda93cbf2a06b0e31530fd03c59bf7faec93e37f84edf57583335a8e0065015",
+      "byteSize": 310
+    }
+  ],
+  "untrackedItems": [
+    {
+      "path": ".Codex/",
+      "itemType": "directory",
+      "fileCount": 2,
+      "totalBytes": 213137
+    },
+    {
+      "path": ".env.example",
+      "itemType": "file",
+      "sha256": "460f9aa0c3b8a5b45e1cfec9501244dc4645569f287548f296dd6280f77ff856",
+      "byteSize": 862
+    },
+    {
+      "path": "CONTINUATION.md",
+      "itemType": "file",
+      "sha256": "fb348f05a1d9a11ca887895b8dadc825e8f685baabf1129a9fdd798987eb3416",
+      "byteSize": 36200
+    },
+    {
+      "path": "apps/",
+      "itemType": "directory",
+      "fileCount": 186,
+      "totalBytes": 5332573
+    },
+    {
+      "path": "docs/",
+      "itemType": "directory",
+      "fileCount": 75,
+      "totalBytes": 1507744
+    },
+    {
+      "path": "mediobots/",
+      "itemType": "directory",
+      "fileCount": 5,
+      "totalBytes": 9310
+    },
+    {
+      "path": "packages/cody/src/agent.ts",
+      "itemType": "file",
+      "sha256": "28ae5d2c00d46b37710b07448d9fa7252652d2983b0ddf2e9492058f0d71dce0",
+      "byteSize": 89629
+    },
+    {
+      "path": "packages/cody/tests/",
+      "itemType": "directory",
+      "fileCount": 3,
+      "totalBytes": 73514
+    },
+    {
+      "path": "packages/contracts/",
+      "itemType": "directory",
+      "fileCount": 6,
+      "totalBytes": 25225
+    },
+    {
+      "path": "packages/domain/COMPLETION-POLICY.md",
+      "itemType": "file",
+      "sha256": "ab3dd312e44e8f656a7c707c21b61824d8205477a69c9760c447ce8b3e75b87e",
+      "byteSize": 7889
+    },
+    {
+      "path": "packages/domain/tests/",
+      "itemType": "directory",
+      "fileCount": 2,
+      "totalBytes": 33956
+    },
+    {
+      "path": "packages/intelligence/",
+      "itemType": "directory",
+      "fileCount": 25,
+      "totalBytes": 152189
+    },
+    {
+      "path": "packages/maestro/",
+      "itemType": "directory",
+      "fileCount": 38,
+      "totalBytes": 734254
+    },
+    {
+      "path": "packages/models/",
+      "itemType": "directory",
+      "fileCount": 9,
+      "totalBytes": 159466
+    },
+    {
+      "path": "packages/runtime/requirements.txt",
+      "itemType": "file",
+      "sha256": "fb5aa54f7ce14dfb76d099d8f9c24a5cf14bbfdfce4571f8b1cd6309ae3f0fe9",
+      "byteSize": 267
+    },
+    {
+      "path": "packages/runtime/src/__pycache__/",
+      "itemType": "directory",
+      "fileCount": 2,
+      "totalBytes": 82319
+    },
+    {
+      "path": "packages/runtime/src/crawl4ai-runtime.ts",
+      "itemType": "file",
+      "sha256": "9a95ca39749882dd764f177ce8fdd3e8ba22bcd97bf9c440d4d289be6a039ab3",
+      "byteSize": 32849
+    },
+    {
+      "path": "packages/runtime/src/crawl4ai_worker.py",
+      "itemType": "file",
+      "sha256": "12a1feefb743af7e044257b5216bfc53462393b87f5265508b2bfc460ab7f0cb",
+      "byteSize": 45424
+    },
+    {
+      "path": "packages/runtime/src/durable.ts",
+      "itemType": "file",
+      "sha256": "5e5499fd130921a3ee93de94b6a49446af8f1f6c8ad1efa14da746bdadfd1a50",
+      "byteSize": 46092
+    },
+    {
+      "path": "packages/runtime/src/resource-governor.ts",
+      "itemType": "file",
+      "sha256": "b84df925852a55bc46aa08d3693452b6ccb73d5ea6c3ab9dde20cac41eaf1a09",
+      "byteSize": 13569
+    },
+    {
+      "path": "packages/runtime/src/resource-telemetry.ts",
+      "itemType": "file",
+      "sha256": "e3b36ae6e4a270b5c4fcb228cd2430bcf53cfe97caeb663890b7944492524a34",
+      "byteSize": 7380
+    },
+    {
+      "path": "packages/runtime/src/subprocess-supervisor.ts",
+      "itemType": "file",
+      "sha256": "39e14b061fa9dc131c34c43d21f137bb734e9dd249cf710dafb1b859845e9317",
+      "byteSize": 6074
+    },
+    {
+      "path": "packages/runtime/src/supervision.ts",
+      "itemType": "file",
+      "sha256": "fe55a9cd4657e87bb2b5322ea502e00cace779da952a9bbabec97c152148ed83",
+      "byteSize": 2375
+    },
+    {
+      "path": "packages/runtime/tests/",
+      "itemType": "directory",
+      "fileCount": 12,
+      "totalBytes": 110825
+    },
+    {
+      "path": "packages/tester/",
+      "itemType": "directory",
+      "fileCount": 5,
+      "totalBytes": 44461
+    },
+    {
+      "path": "packages/tools/src/permissions.ts",
+      "itemType": "file",
+      "sha256": "6f3ff4ebb081da25a0ad430890d290a0d2813a9fc7890555f8b85e6fc5f25ff0",
+      "byteSize": 31908
+    },
+    {
+      "path": "packages/tools/tests/",
+      "itemType": "directory",
+      "fileCount": 2,
+      "totalBytes": 46933
+    },
+    {
+      "path": "packages/vision/",
+      "itemType": "directory",
+      "fileCount": 28,
+      "totalBytes": 296764
+    },
+    {
+      "path": "scratch/",
+      "itemType": "directory",
+      "fileCount": 5,
+      "totalBytes": 60563
+    }
+  ],
+  "baselineTests": {
+    "totalPass": 819,
+    "totalFail": 0,
+    "totalSkipped": 8,
+    "totalVerified": 827,
+    "passPercentage": "100% of non-skipped tests",
+    "breakdown": [
+      {
+        "package": "@mediobot-v2/domain",
+        "command": "pnpm --filter @mediobot-v2/domain test",
+        "pass": 39,
+        "fail": 0,
+        "skipped": 0,
+        "durationMs": 85
+      },
+      {
+        "package": "@mediobot-v2/models",
+        "command": "pnpm --filter @mediobot-v2/models test",
+        "pass": 75,
+        "fail": 0,
+        "skipped": 0,
+        "durationMs": 1076
+      },
+      {
+        "package": "@mediobot-v2/runtime",
+        "command": "pnpm --filter @mediobot-v2/runtime test",
+        "pass": 67,
+        "fail": 0,
+        "skipped": 0,
+        "durationMs": 4330
+      },
+      {
+        "package": "@mediobot-v2/intelligence",
+        "command": "pnpm --filter @mediobot-v2/intelligence test",
+        "pass": 33,
+        "fail": 0,
+        "skipped": 0,
+        "durationMs": 575
+      },
+      {
+        "package": "@mediobot-v2/tools (core)",
+        "command": "pnpm --filter @mediobot-v2/tools test",
+        "pass": 27,
+        "fail": 0,
+        "skipped": 0,
+        "durationMs": 533
+      },
+      {
+        "package": "@mediobot-v2/tools (ssrf)",
+        "command": "node --experimental-strip-types --test packages/tools/tests/ssrf-security.test.ts",
+        "pass": 3,
+        "fail": 0,
+        "skipped": 0,
+        "durationMs": 86
+      },
+      {
+        "package": "@mediobot-v2/cody",
+        "command": "pnpm --filter @mediobot-v2/cody test",
+        "pass": 39,
+        "fail": 0,
+        "skipped": 0,
+        "durationMs": 651
+      },
+      {
+        "package": "@mediobot-v2/tester",
+        "command": "pnpm --filter @mediobot-v2/tester test",
+        "pass": 6,
+        "fail": 0,
+        "skipped": 0,
+        "durationMs": 175
+      },
+      {
+        "package": "@mediobot-v2/maestro",
+        "command": "pnpm --filter @mediobot-v2/maestro test",
+        "pass": 140,
+        "fail": 0,
+        "skipped": 0,
+        "durationMs": 6393
+      },
+      {
+        "package": "@mediobot-v2/vision (unit)",
+        "command": "node --experimental-strip-types --test --test-concurrency=1 packages/vision/tests/adapter.test.ts packages/vision/tests/browser-runtime.test.ts packages/vision/tests/model-boundaries.test.ts",
+        "pass": 10,
+        "fail": 0,
+        "skipped": 0,
+        "durationMs": 638
+      },
+      {
+        "package": "@mediobot-v2/command-center (backend)",
+        "command": "pnpm --filter @mediobot-v2/command-center test",
+        "pass": 340,
+        "fail": 0,
+        "skipped": 8,
+        "durationMs": 50717
+      },
+      {
+        "package": "@mediobot-v2/command-center (UI)",
+        "command": "pnpm --filter @mediobot-v2/command-center test:ui",
+        "pass": 40,
+        "fail": 0,
+        "skipped": 0,
+        "durationMs": 62114
+      }
+    ]
+  },
+  "environment": {
+    "os": "darwin arm64",
+    "release": "27.0.0",
+    "nodeVersion": "v22.22.3",
+    "pnpmVersion": "9.15.0",
+    "pythonVenvVersion": "Python 3.12.13",
+    "cpuCores": 10,
+    "totalMemoryBytes": 17179869184
+  }
+}

@@ -3,11 +3,30 @@ dist/
 coverage/
 tmp/
 .tmp/
+.mediobot/
 test-workspaces/
+.zip-inspect/
 .env
+.env.local
+.env.*.local
 .env.*
 !.env.example
 *.log
 .DS_Store
 .idea/
 .vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# References & DBs
+.references/
+*.sqlite
+*.sqlite-journal
+*.db
+*.db-journal
+
