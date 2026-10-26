@@ -1,0 +1,13 @@
+{
+  "name": "@mediobot-v2/domain",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types --test src/index.test.ts",
+    "typecheck": "tsc --noEmit"
+  }
+}

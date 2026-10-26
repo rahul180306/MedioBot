@@ -1,0 +1,13 @@
+node_modules/
+dist/
+coverage/
+tmp/
+.tmp/
+test-workspaces/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.idea/
+.vscode/
