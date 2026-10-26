@@ -15,9 +15,41 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
+  packages/cody:
+    dependencies:
+      '@mediobot-v2/domain':
+        specifier: workspace:*
+        version: link:../domain
+      '@mediobot-v2/runtime':
+        specifier: workspace:*
+        version: link:../runtime
+      '@mediobot-v2/tools':
+        specifier: workspace:*
+        version: link:../tools
+    devDependencies:
+      '@types/node':
+        specifier: ^22.0.0
+        version: 22.20.4
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
   packages/domain: {}
 
   packages/runtime:
+    dependencies:
+      '@mediobot-v2/domain':
+        specifier: workspace:*
+        version: link:../domain
+    devDependencies:
+      '@types/node':
+        specifier: ^22.0.0
+        version: 22.20.4
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  packages/tools:
     dependencies:
       '@mediobot-v2/domain':
         specifier: workspace:*

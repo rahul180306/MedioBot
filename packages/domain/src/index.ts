@@ -101,6 +101,7 @@ export interface WorldEvent {
   readonly workerId?: WorkerId;
   readonly taskId?: TaskId;
   readonly resourceId?: ResourceId;
+  readonly toolName?: string;
   readonly occurredAt: number;
 }
 
@@ -147,6 +148,7 @@ export interface EventInput {
   readonly workerId?: WorkerId;
   readonly taskId?: TaskId;
   readonly resourceId?: ResourceId;
+  readonly toolName?: string;
 }
 
 function id<Name extends string>(prefix: string): Id<Name> {
